@@ -1,0 +1,23 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2024-10-04 01:04:44 #1 server] 
+Server on port 6136 has started by 1800@LAPTOP-PPKL1IBB
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2024-10-04 01:04:56 #1 server] 
+java.net.BindException: Address already in use: bind
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:550)
+	at java.base/sun.nio.ch.Net.bind(Net.java:539)
+	at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:643)
+	at java.base/java.net.ServerSocket.bind(ServerSocket.java:396)
+	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:282)
+	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:226)
+	at com.objectdb.o.SMR.I(SMR.java:259)
+	at com.objectdb.o.SMR.n(SMR.java:159)
+	at com.objectdb.o.TOL.run(TOL.java:116)
+	at com.objectdb.Server.runCommand(Server.java:193)
+	at com.objectdb.Server.run(Server.java:102)
+	at com.objectdb.ServerRunner.main(ServerRunner.java:31)
+
