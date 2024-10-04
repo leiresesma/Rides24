@@ -56,7 +56,7 @@ public class GauzatuEragiketaMockWhiteTest {
 
     
     @Test
-    // sut.gauzatuEragiketa: El usuario es nulo. El método debe devolver false.
+    // sut.gauzatuEragiketa: El usuario es nulo. El mï¿½todo debe devolver false.
     public void test1() {
         String username = null;
         double amount = 50.0;
@@ -76,12 +76,12 @@ public class GauzatuEragiketaMockWhiteTest {
             assertFalse(result);
 
         } catch (Exception e) {
-            fail("No se esperaba ninguna excepción: " + e.getMessage());
+            fail("No se esperaba ninguna excepciï¿½n: " + e.getMessage());
         }
     }
 
     @Test
-    // sut.gauzatuEragiketa: El usuario no existe en la base de datos. El método debe devolver false.
+    // sut.gauzatuEragiketa: El usuario no existe en la base de datos. El mï¿½todo debe devolver false.
     public void test2() {
         String username = "nonexistentUser";
         double amount = 50.0;
@@ -102,7 +102,7 @@ public class GauzatuEragiketaMockWhiteTest {
             assertFalse(result);
 
         } catch (Exception e) {
-            fail("No se esperaba ninguna excepción: " + e.getMessage());
+            fail("No se esperaba ninguna excepciï¿½n: " + e.getMessage());
         }
     }
 
@@ -129,7 +129,7 @@ public class GauzatuEragiketaMockWhiteTest {
             assertEquals(50.0, user.getMoney(), 0.01); 
 
         } catch (Exception e) {
-            fail("No se esperaba ninguna otra excepción: " + e.getMessage());
+            fail("No se esperaba ninguna otra excepciï¿½n: " + e.getMessage());
         } finally {
 			sut.close();
 		}
@@ -147,9 +147,7 @@ public class GauzatuEragiketaMockWhiteTest {
         try {
            	Mockito.when(db.createQuery(Mockito.anyString(), Mockito.any(Class.class))).thenReturn(typedQuery);		
     		Mockito.when(typedQuery.getSingleResult()).thenReturn(user);
-            //Mockito.when(db.find(User.class, username)).thenReturn(user);
 
-           
             sut.open();
             boolean result = sut.gauzatuEragiketa(username, amount, deposit);
             sut.close();
@@ -159,12 +157,12 @@ public class GauzatuEragiketaMockWhiteTest {
            
 
         } catch (Exception e) {
-            fail("No se esperaba ninguna otra excepción: " + e.getMessage());
+            fail("No se esperaba ninguna otra excepciï¿½n: " + e.getMessage());
         }
     }
 
     @Test
-    // sut.gauzatuEragiketa: Verificar el depósito exitoso.
+    // sut.gauzatuEragiketa: Verificar el depï¿½sito exitoso.
     public void test5() {
         String username = "existingUser";
         double amount = 50.0;
@@ -187,7 +185,7 @@ public class GauzatuEragiketaMockWhiteTest {
             assertEquals(150.0, user.getMoney(), 0.01);
 
         } catch (Exception e) {
-            fail("No se esperaba ninguna excepción: " + e.getMessage());
+            fail("No se esperaba ninguna excepciï¿½n: " + e.getMessage());
         }
     }
 }

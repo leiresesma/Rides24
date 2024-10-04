@@ -52,6 +52,7 @@ public class CreateRideMockBlackTest {
 		Mockito.doReturn(et).when(db).getTransaction();
 	    sut=new DataAccess(db);
     }
+	
 	@After
     public  void tearDown() {
 		persistenceMock.close();
